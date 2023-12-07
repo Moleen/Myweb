@@ -1,0 +1,36 @@
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.24);
+    height: 10%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.499);
+    z-index: 1;
+}
+
+
+nav ul{
+    height: 10%;
+    width: 50%;
+    position: fixed;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+}
+nav ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    height: 70px;
+    width: 70px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}

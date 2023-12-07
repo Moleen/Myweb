@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html{
+}
+
+
+/* scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #4b4b4b; /* Warna thumb (bagian yang dapat digerakkan) */
+    border-radius: 10px; /* Sudut border thumb */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Warna track (bagian yang tidak dapat digerakkan) */
+}
+
+
+
+
+/* Home */
+.Home{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(84, 84, 84, 0.7), rgba(0, 0, 0, 0.7)), url('../pict/bg.jpg');
+    background-size: cover;
+    align-items: center;
+}
+
+.Home .greet{
+    height: 20%;
+    width: 60%;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    margin: auto;
+    position: relative;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+
+}
+
+.greet.show {
+    opacity: 1;
+}
+
+.dividergrad{
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+
+}
+.dividergrad2{
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+    z-index: 1;
+
+}
+/* About */
+.about{
+    height: 100%;
+    width: 100%;
+    background-image: url('../pict/12.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+
+}
+
+.aboutme {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 200px;
+    height: 65%;
+    width: 65%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(240, 248, 255, 0.137);
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; 
+    transform: translateY(-5%);
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.508);
+}
+
+
+.aboutme.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.aboutme .ppimage{
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: -100px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.about .sentence{
+    color: aliceblue;
+    display: inline;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    width: 60%;
+    position: relative;
+    top: -10px;
+}
+
+.sentence h1{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.sentence p{
+    font-size: 24px;
+}
+
+.link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+    position: absolute;
+    bottom: 40px;
+    width: 30%;
+    height: 15%;
+}
+
+.link img{
+    width: 90%;
+    height: 90%;
+    transition: height 0.3s ease, width 0.3s ease; /* Transisi untuk properti height dan width */
+}
+
+.link a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    
+
+}
+.link a img:hover{
+    height: 100%;
+    width: 100%;
+}
+
+/* skills */
+
+.skill{
+    height: 90%;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.skill .container{
+    z-index: 2;
+    margin-top: 50px;
+    height: 75%;
+    width: 65%;
+    border-radius: 20px;
+    box-shadow: 1px 1px 15px rgba(255, 255, 255, 0.563);
+    position: absolute;
+}
+
+.container h1{
+    align-items: center;
+    height: 80px;
+    width: 20%;
+    margin-left: 50px;
+    display: flex;
+    color: #f1f1f1;
+}
+
+.skill .skills {
+    position: relative;
+    text-align: center;
+    width: 90%;
+    height: 75%;
+    margin: auto;
+}
+
+.skill .tabs {
+    width: 50%;
+    display: flex;
+    justify-self: center;
+    position: relative;
+}
+
+.skill .tab {
+    margin-right: 20px;
+    color: white;
+    align-items: center;
+    height: 20px;
+    width: 100px;
+    padding: 10px;
+    border: 1px solid #dddddd47;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #dddddd00;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.skill .tab:hover {
+    background-color: #ddd;
+}
+
+.skill .skills .content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    height: 90%;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    color: #eee;
+    text-align: left;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills .content .tech{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    height: 170px;
+    width: 170px;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgcontainer{
+    width: 100px;
+    height: 100px;
+}
+.imgcontainer img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.skill .content.active {
+    opacity: 1;
+}
